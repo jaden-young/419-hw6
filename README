@@ -1,0 +1,15 @@
+To run:
+    make run
+
+or manually:
+    hadoop jar friendcount.jar me.jadenyoung.hw6.FriendCount -input hdfs-input-path -output hdfs-output-path -numReducers x
+
+To build (downloading new dependencies):
+    git clone git@github.com:jaden-young/419-hw6.git
+    cd 419-hw6
+    gradle build
+
+To build (using system programs):
+    export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+    hadoop com.sun.tools.javac.Main *.java
+    jar cf friendcount.jar *.class
